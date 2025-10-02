@@ -1,0 +1,472 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VR EMPRESA A F dos Santos Araujo - Especialista em Colchões</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --primary-color: #1a5276;
+            --secondary-color: #2e86c1;
+            --accent-color: #f39c12;
+            --light-color: #ecf0f1;
+        }
+        
+        .bg-primary-custom {
+            background-color: var(--primary-color);
+        }
+        
+        .btn-primary-custom {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            color: white;
+        }
+        
+        .btn-primary-custom:hover {
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+        }
+        
+        .btn-highlight {
+            background-color: var(--accent-color);
+            border-color: var(--accent-color);
+            color: white;
+            font-weight: bold;
+        }
+        
+        .btn-highlight:hover {
+            background-color: #e67e22;
+            border-color: #e67e22;
+            color: white;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            padding: 120px 0;
+            color: white;
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .product-card {
+            transition: transform 0.3s;
+            height: 100%;
+            border: none;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+        
+        .footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 40px 0;
+        }
+        
+        .bg-light-custom {
+            background-color: var(--light-color);
+        }
+        
+        .nav-pills .nav-link.active {
+            background-color: var(--primary-color);
+        }
+        
+        .promo-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 100;
+        }
+        
+        .brand-name {
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header/Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary-custom sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="bi bi-house-heart"></i> <span class="brand-name">VR EMPRESA A F dos Santos Araujo</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#inicio">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sobre">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#produtos">Produtos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contato">Contato</a>
+                    </li>
+                    <li class="nav-item ms-2">
+                        <a class="btn btn-highlight" href="#" target="_blank">Portal VR</a>
+                    </li>
+                    <li class="nav-item ms-2">
+                        <a class="btn btn-highlight" href="#" target="_blank">Estabelecimento VR</a>
+                    </li>
+                    <li class="nav-item ms-2">
+                        <a class="btn btn-highlight" href="#" target="_blank">VR Empresa</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Sua Noite de Sono Perfeita Começa Aqui</h1>
+            <p class="lead">Há mais de 10 anos oferecendo os melhores colchões da região</p>
+            <div class="mt-5">
+                <a class="btn btn-highlight btn-lg me-3" href="#produtos">Ver Colchões</a>
+                <a class="btn btn-outline-light btn-lg me-3" href="#contato">Fale Conosco</a>
+                <a class="btn btn-highlight btn-lg" href="#" target="_blank">Portal VR</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promo Banner -->
+    <div class="bg-warning text-dark py-3 text-center">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <h5 class="mb-0">PROMOÇÃO ESPECIAL! Até 30% OFF em colchões premium + 12x sem juros</h5>
+                </div>
+                <div class="col-md-4 text-md-end">
+                    <a class="btn btn-dark btn-sm" href="#produtos">Aproveitar Agora</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="sobre" class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h2 class="mb-4">Sobre Nossa Empresa</h2>
+                    <p class="lead">A <span class="brand-name">VR EMPRESA A F dos Santos Araujo</span> é especializada na venda de colchões de alta qualidade para garantir seu conforto e bem-estar.</p>
+                    <p>Com CNPJ 32.745.886/0001-99, estamos no mercado para proporcionar as melhores noites de sono com produtos duráveis e confortáveis. Nossa missão é melhorar a qualidade do seu descanso com colchões que combinam tecnologia e conforto.</p>
+                    <div class="mt-4">
+                        <a class="btn btn-primary-custom me-2" href="#" target="_blank">Estabelecimento VR</a>
+                        <a class="btn btn-highlight" href="#" target="_blank">VR Empresa</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="img-fluid rounded shadow" alt="Nossa loja de colchões">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-5 bg-light-custom">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2>Por que escolher nossos colchões?</h2>
+                <p class="lead">Oferecemos o melhor em conforto e qualidade para seu descanso</p>
+            </div>
+            <div class="row">
+                <div class="col-md-4 text-center mb-4">
+                    <i class="bi bi-stars feature-icon"></i>
+                    <h4>Alta Qualidade</h4>
+                    <p>Utilizamos materiais premium para garantir durabilidade e conforto incomparáveis.</p>
+                </div>
+                <div class="col-md-4 text-center mb-4">
+                    <i class="bi bi-truck feature-icon"></i>
+                    <h4>Entrega Rápida</h4>
+                    <p>Entregamos em toda a região, garantindo que você receba seu colchão rapidamente.</p>
+                </div>
+                <div class="col-md-4 text-center mb-4">
+                    <i class="bi bi-currency-dollar feature-icon"></i>
+                    <h4>Melhor Preço</h4>
+                    <p>Oferecemos preços competitivos com a melhor relação custo-benefício do mercado.</p>
+                </div>
+                <div class="col-md-4 text-center mb-4">
+                    <i class="bi bi-shield-check feature-icon"></i>
+                    <h4>Garantia Estendida</h4>
+                    <p>Todos os nossos colchões possuem garantia para sua tranquilidade.</p>
+                </div>
+                <div class="col-md-4 text-center mb-4">
+                    <i class="bi bi-arrow-repeat feature-icon"></i>
+                    <h4>Troca Facilitada</h4>
+                    <p>Sistema de troca simplificado caso não se adapte ao produto.</p>
+                </div>
+                <div class="col-md-4 text-center mb-4">
+                    <i class="bi bi-credit-card feature-icon"></i>
+                    <h4>Parcele em até 12x</h4>
+                    <p>Facilidade de pagamento com cartão e outras formas de parcelamento.</p>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a class="btn btn-highlight" href="#" target="_blank">Portal VR</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="produtos" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2>Nossos Colchões</h2>
+                <p class="lead">Conheça nossa linha completa de colchões para todos os gostos e necessidades</p>
+                
+                <ul class="nav nav-pills justify-content-center mb-4" id="productTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="all-tab" data-bs-toggle="pill" data-bs-target="#all" type="button" role="tab">Todos</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="premium-tab" data-bs-toggle="pill" data-bs-target="#premium" type="button" role="tab">Premium</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id-="ortho-tab" data-bs-toggle="pill" data-bs-target="#ortho" type="button" role="tab">Ortopédicos</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="spring-tab" data-bs-toggle="pill" data-bs-target="#spring" type="button" role="tab">Com Molas</button>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="tab-content" id="productTabsContent">
+                <div class="tab-pane fade show active" id="all" role="tabpanel">
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="card product-card">
+                                <span class="promo-badge"><span class="badge bg-danger">15% OFF</span></span>
+                                <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Colchão Premium">
+                                <div class="card-body">
+                                    <h5 class="card-title">Colchão Premium Sleepwell</h5>
+                                    <p class="card-text">Colchão de espuma memory foam com tecnologia de ponta para máximo conforto.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <span class="text-decoration-line-through text-muted">R$ 2.499,00</span>
+                                            <h4 class="text-primary mb-0">R$ 2.099,00</h4>
+                                        </div>
+                                        <a href="#" class="btn btn-primary-custom">Comprar</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card product-card">
+                                <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Colchão Ortopédico">
+                                <div class="card-body">
+                                    <h5 class="card-title">Colchão Ortopédico Postural</h5>
+                                    <p class="card-text">Ideal para quem precisa de apoio extra para a coluna, com densidade especial.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h4 class="text-primary mb-0">R$ 1.599,00</h4>
+                                        <a href="#" class="btn btn-primary-custom">Comprar</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card product-card">
+                                <span class="promo-badge"><span class="badge bg-danger">10% OFF</span></span>
+                                <img src="https://images.unsplash.com/photo-1586105251261-72a756497a11?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Colchão Molas">
+                                <div class="card-body">
+                                    <h5 class="card-title">Colchão Molas Ensacadas</h5>
+                                    <p class="card-text">Sistema de molas ensacadas individualmente para melhor distribuição de peso.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="text-decoration-line-through text-muted">R$ 1.899,00</span>
+                                        <h4 class="text-primary mb-0">R$ 1.709,00</h4>
+                                        <a href="#" class="btn btn-primary-custom">Comprar</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5">
+                <a class="btn btn-highlight btn-lg" href="#" target="_blank">Estabelecimento VR</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-5 bg-light-custom">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2>O que nossos clientes dizem</h2>
+                <p class="lead">Depoimentos de quem já experimentou a qualidade dos nossos colchões</p>
+            </div>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <i class="bi bi-chat-quote feature-icon"></i>
+                            <p class="card-text">"Comprei um colchão na VR Empresa e mudou completamente minha qualidade de sono. Super recomendo!"</p>
+                            <h5 class="card-title">Maria Silva</h5>
+                            <div class="text-warning">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <i class="bi bi-chat-quote feature-icon"></i>
+                            <p class="card-text">"Atendimento excelente e produtos de primeira qualidade. Fiquei muito satisfeito com a compra."</p>
+                            <h5 class="card-title">João Santos</h5>
+                            <div class="text-warning">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-half"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <i class="bi bi-chat-quote feature-icon"></i>
+                            <p class="card-text">"Resolveu meu problema de dor nas costas. O colchão ortopédico é incrível! Ótimo custo-benefício."</p>
+                            <h5 class="card-title">Ana Oliveira</h5>
+                            <div class="text-warning">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a class="btn btn-highlight" href="#" target="_blank">VR Empresa</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contato" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2>Entre em Contato</h2>
+                <p class="lead">Estamos à disposição para melhor atendê-lo</p>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Nome</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Telefone</label>
+                            <input type="tel" class="form-control" id="phone">
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Mensagem</label>
+                            <textarea class="form-control" id="message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary-custom">Enviar Mensagem</button>
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Informações de Contato</h5>
+                            <p><i class="bi bi-geo-alt-fill me-2"></i> Endereço: Av. Principal, 123 - Centro, Cidade - Estado</p>
+                            <p><i class="bi bi-telephone-fill me-2"></i> Telefone: (11) 3456-7890</p>
+                            <p><i class="bi bi-whatsapp me-2"></i> WhatsApp: (11) 9 9999-8888</p>
+                            <p><i class="bi bi-envelope-fill me-2"></i> Email: contato@vrempresafsantos.com.br</p>
+                            <hr>
+                            <h5 class="card-title">Horário de Funcionamento</h5>
+                            <p>Segunda a Sexta: 9h às 18h</p>
+                            <p>Sábado: 9h às 13h</p>
+                            <p>Domingo: Fechado</p>
+                        </div>
+                    </div>
+                    <div class="mt-3 text-center">
+                        <a class="btn btn-highlight me-2" href="#" target="_blank">Portal VR</a>
+                        <a class="btn btn-highlight me-2" href="#" target="_blank">Estabelecimento VR</a>
+                        <a class="btn btn-highlight" href="#" target="_blank">VR Empresa</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5>VR EMPRESA A F dos Santos Araujo</h5>
+                    <p>Especialista em colchões de alta qualidade</p>
+                    <p>CNPJ: 32.745.886/0001-99</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Links Rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#inicio" class="text-white">Início</a></li>
+                        <li><a href="#sobre" class="text-white">Sobre</a></li>
+                        <li><a href="#produtos" class="text-white">Produtos</a></li>
+                        <li><a href="#contato" class="text-white">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Redes Sociais</h5>
+                    <div class="d-flex">
+                        <a href="#" class="text-white me-3"><i class="bi bi-facebook fs-4"></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-instagram fs-4"></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-whatsapp fs-4"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-linkedin fs-4"></i></a>
+                    </div>
+                    <div class="mt-3">
+                        <a class="btn btn-sm btn-highlight me-2" href="#" target="_blank">Portal VR</a>
+                        <a class="btn btn-sm btn-highlight me-2" href="#" target="_blank">Estabelecimento VR</a>
+                        <a class="btn btn-sm btn-highlight" href="#" target="_blank">VR Empresa</a>
+                    </div>
+                </div>
+            </div>
+            <hr class="mt-0 mb-4">
+            <div class="text-center">
+                <p>&copy; 2023 VR EMPRESA A F dos Santos Araujo - Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
